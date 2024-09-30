@@ -1,0 +1,7 @@
+{
+  "name": "IFTS-DAPD-Front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

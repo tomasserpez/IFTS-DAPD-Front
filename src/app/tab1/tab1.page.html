@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  
+    <h2>Pokemon 1</h2>
+    <ion-list>
+    <ion-item *ngFor="let item of pokemonList?.results">
+    <b>{{capFirstLetter(item.name)}}</b>
+    <ion-button slot="end" (click)="getPokemonButtonHandler(item.name)">Get</ion-button>
+    </ion-item>
+    </ion-list>
+    
+   
+</ion-content>

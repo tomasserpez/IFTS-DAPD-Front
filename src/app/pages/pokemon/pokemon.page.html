@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Pokemon Info</ion-title>
+  <!-- Back button - goes to root path -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="tertiary">
+      </ion-back-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid [fixed]=true>
+    <ion-row id="pokemonNameRow">
+      <ion-col id="pokemonSpriteCol">
+        <ion-img
+          src='{{pokemon?.sprites?.front_default}}'
+          alt='{{capFirstLetter(pokemon?.name || "")}} sprite'      
+        ></ion-img>
+      </ion-col >
+      <ion-col class="ion-justify-content-center">
+        <div><h1>{{capFirstLetter(pokemonName)}}</h1></div>      
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            ID: {{pokemon?.id}}
+          </ion-item>
+          <ion-item>
+            Nombre: {{capFirstLetter(pokemon?.name || "")}}
+          </ion-item>
+          <ion-item>
+            Peso: {{pokemon?.weight}} lb
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  
+</ion-content>
